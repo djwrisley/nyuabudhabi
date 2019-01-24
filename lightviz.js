@@ -132,7 +132,7 @@ var xLabel = svg.append("text")
     .attr("y",height +40)
     .attr("font-size",18)
     .attr("text-anchor","middle")
-    .text(boundData.xString);
+    .text(boundData.xString + " ("+explainedvariance[0]+")");
 
 var yLabel = svg.append("text")
     .attr("x",0-40)
@@ -140,7 +140,7 @@ var yLabel = svg.append("text")
     .attr("font-size",18)
     .attr("text-anchor","middle")
     .attr("transform", "rotate(-90,-40,"+height/2+")")
-    .text(boundData.yString);
+    .text(boundData.yString + " ("+explainedvariance[1]+")");
 
 
 
@@ -586,6 +586,6 @@ legend.append("text")
         .style("text-anchor","middle")
         .style("font-size","32px")
         .style("alignment-baseline", "middle")
-        .text("Principal Component Analysis")
+        .text("Principal Component Analysis ("+loadings.length+" MFW)")
 
 };
